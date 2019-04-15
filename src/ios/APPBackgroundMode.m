@@ -264,8 +264,7 @@ NSString* const kAPPBackgroundEventDeactivate = @"deactivate";
 
 //         [obj setValue:[NSNumber numberWithBool:YES]
 //                forKey:[APPBackgroundMode wkProperty]];
-        [obj setValue:[NSNumber numberWithBool:NO]
-               forKey:@"requiresUserActionForMediaPlayback"];
+       
         [obj setValue:[NSNumber numberWithBool:NO]
                forKey:@"requiresUserActionForMediaPlayback"];
 
