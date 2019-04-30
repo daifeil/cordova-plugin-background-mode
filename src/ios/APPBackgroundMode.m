@@ -242,10 +242,11 @@ NSString* const kAPPBackgroundEventDeactivate = @"deactivate";
 + (NSString*) wkProperty
 {
   
-    NSOperatingSystemVersion iOS_12_2_0 = (NSOperatingSystemVersion){12, 2, 0};
     NSString* str = @"X2Fsd2F5c1J1bnNBdEZvcmVncm91bmRQcmlvcml0eQ==";
-    if ([[NSProcessInfo processInfo] isOperatingSystemAtLeastVersion: iOS_12_2_0]) {
-          str = @"YWx3YXlzUnVuc0F0Rm9yZWdyb3VuZFByaW9yaXR5";
+    if (@available(iOS 12.2, *)) {
+      str = @"YWx3YXlzUnVuc0F0Rm9yZWdyb3VuZFByaW9yaXR5";
+    } else {
+      str = @"X2Fsd2F5c1J1bnNBdEZvcmVncm91bmRQcmlvcml0eQ==";
     }
     NSData* data  = [[NSData alloc] initWithBase64EncodedString:str options:0];
 
